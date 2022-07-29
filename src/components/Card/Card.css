@@ -1,8 +1,9 @@
 .card {
   padding-left: 20px;
-  width: 40%;
   display: flex;
   flex-direction: column;
+  font-family: "Poppins";
+  font-size: 13px;
 }
 
 .card--star {
@@ -12,4 +13,9 @@
 .star--container {
   display: flex;
   gap: 7px;
+  padding-top: 5px;
+}
+
+.coverImg {
+  height: 250px;
 }

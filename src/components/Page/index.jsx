@@ -2,21 +2,30 @@ import React from "react";
 import Hero from "../Hero";
 import NavBar from "../NavBar";
 import Card from "../Card";
+import data from "../../data";
 import "./Page.css";
+
+// console.log(data);
 
 const Page = () => {
   return (
     <div className="page">
       <NavBar />
       <Hero />
-      <Card
-        img="imgZaferes.png"
-        rating="5.0"
-        reviewCount={6}
-        country="USA"
-        title="Life lessons with Katie Zaferes"
-        price={136}
-      />
+      <div className="card--container">
+        {data.map((card) => {
+          return (
+            <Card
+              img={card.img}
+              rating={card.stats.rating}
+              reviewCount={card.stats.reviewCount}
+              location={card.location}
+              title={card.title}
+              price={card.price}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
