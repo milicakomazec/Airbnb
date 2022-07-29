@@ -1,10 +1,10 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ img, rating, reviewCount, country, title, price }) => {
+const Card = ({ img, rating, reviewCount, location, title, price }) => {
   return (
     <div className="card">
-      <img src={`../../../media/${img}`} alt="Zaferes in swimsuit"></img>
+      <img src={img} alt="Zaferes in swimsuit" className="coverImg"></img>
       <div className="star--container">
         <img
           src="../../media/star.png"
@@ -12,11 +12,11 @@ const Card = ({ img, rating, reviewCount, country, title, price }) => {
           className="card--star"
         ></img>
         <div>{rating}</div>
-        <div>({reviewCount})</div>
-        <div>{country}</div>
+        <div style={{ color: "#918E9B" }}>({reviewCount})</div>
+        <div style={{ color: "#918E9B" }}>{location}</div>
       </div>
 
-      <div>{title}</div>
+      <div style={{ paddingTop: "4px", paddingBottom: "4px" }}>{title}</div>
       <div>
         <b>From {price}$ </b>/ person
       </div>
