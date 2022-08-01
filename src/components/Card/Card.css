@@ -1,18 +1,17 @@
 .card {
-  padding: 0 10px;
   display: flex;
   flex-direction: column;
   font-family: "Poppins";
   font-size: 13px;
   position: relative;
+  margin-left: 20px;
 }
 .card--badge {
   position: absolute;
   top: 5px;
-  left: 15px;
-  padding: 0px 3px;
+  left: 5px;
+  padding: 6px 3px 0px 3px;
   background-color: white;
-  padding-top: 6px;
   font-size: 10px;
   font-weight: 400;
   height: 20px;
@@ -33,13 +32,5 @@
 }
 
 .card:first-child {
-  padding-left: 20px;
-}
-
-.card:first-child .card--badge {
-  left: 25px;
-}
-
-.card:last-child {
-  padding-right: 20px;
+  margin-left: 0;
 }
