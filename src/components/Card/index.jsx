@@ -1,9 +1,21 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({ img, rating, reviewCount, location, title, price }) => {
+const Card = ({
+  img,
+  rating,
+  reviewCount,
+  location,
+  title,
+  price,
+  openSpots,
+}) => {
+  let badgeText = "";
+  if (openSpots === 0) badgeText = "SOLD OUT";
+  else if (location === "Online") badgeText = "ONLINE";
   return (
     <div className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
       <img src={img} alt="Zaferes in swimsuit" className="coverImg"></img>
       <div className="star--container">
         <img
